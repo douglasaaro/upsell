@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oferta Especial — Cozinhando com Fé</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --creme: #F5F0E8;
+      --bege: #E8DFD0;
+      --terracota: #C4714A;
+      --terracota-escuro: #A35A35;
+      --marrom: #5C3D2E;
+      --marrom-claro: #8B6555;
+      --dourado: #C9A96E;
+      --dourado-claro: #E8C98A;
+      --texto: #3A2820;
+      --texto-suave: #6B4C3B;
+      --verde-aceitar: #4CAF50;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--creme);
+      font-family: 'Lato', sans-serif;
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    /* TOPO */
+    .topo {
+      background: linear-gradient(135deg, var(--marrom) 0%, var(--terracota-escuro) 100%);
+      text-align: center;
+      padding: 14px 20px;
+    }
+    .topo p {
+      color: var(--dourado-claro);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--marrom) 0%, #3A2015 100%);
+      padding: 60px 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A96E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 1;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--marrom);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 6vw, 52px);
+      color: var(--creme);
+      line-height: 1.15;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .hero h1 em {
+      color: var(--dourado-claro);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(16px, 3vw, 22px);
+      color: var(--dourado);
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .hero-divisor {
+      width: 60px;
+      height: 2px;
+      background: var(--dourado);
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #D4C4B4;
+      font-size: clamp(15px, 2.5vw, 18px);
+      line-height: 1.8;
+      font-weight: 300;
+      position: relative;
+    }
+
+    /* CAPA DO EBOOK */
+    .ebook-section {
+      background: var(--bege);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .ebook-mockup {
+      max-width: 280px;
+      margin: 0 auto 40px;
+      position: relative;
+    }
+
+    .ebook-mockup-inner {
+      background: linear-gradient(145deg, var(--marrom) 0%, #2A1810 100%);
+      border-radius: 8px 16px 16px 8px;
+      padding: 40px 30px;
+      box-shadow:
+        -6px 6px 0px #1a0f08,
+        0 20px 60px rgba(0,0,0,0.4),
+        0 8px 20px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ebook-mockup-inner::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 8px;
+      background: linear-gradient(180deg, var(--dourado) 0%, var(--terracota) 100%);
+    }
+
+    .ebook-mockup-inner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A96E' fill-opacity='0.05'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2C10.059 2 2 10.059 2 20s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .ebook-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ebook-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--creme);
+      line-height: 1.2;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ebook-subtitulo {
+      font-size: 11px;
+      color: var(--dourado);
+      letter-spacing: 1px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ebook-badge {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      background: var(--terracota);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(196,113,74,0.4);
+    }
+
+    .ebook-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 4vw, 34px);
+      color: var(--marrom);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .ebook-section h2 em {
+      color: var(--terracota);
+      font-style: italic;
+    }
+
+    .ebook-section > p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: var(--texto-suave);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* O QUE VOCÊ RECEBE */
+    .conteudo {
+      background: white;
+      padding: 60px 20px;
+    }
+
+    .conteudo-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracota);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .conteudo h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 4vw, 32px);
+      color: var(--marrom);
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+
+    .dias-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .dia-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: var(--creme);
+      border-radius: 8px;
+      border-left: 3px solid var(--dourado);
+      transition: transform 0.2s;
+    }
+
+    .dia-item:hover {
+      transform: translateX(4px);
+    }
+
+    .dia-numero {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--dourado);
+      line-height: 1;
+      min-width: 40px;
+    }
+
+    .dia-info strong {
+      display: block;
+      font-size: 15px;
+      color: var(--marrom);
+      margin-bottom: 4px;
+    }
+
+    .dia-info span {
+      font-size: 13px;
+      color: var(--texto-suave);
+      line-height: 1.5;
+    }
+
+    /* VERSÍCULO DESTAQUE */
+    .versiculo-destaque {
+      background: linear-gradient(135deg, var(--marrom) 0%, #2A1810 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .versiculo-destaque blockquote {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .versiculo-destaque blockquote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(18px, 3vw, 26px);
+      color: var(--creme);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .versiculo-destaque blockquote cite {
+      font-size: 13px;
+      color: var(--dourado);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* OFERTA */
+    .oferta {
+      background: var(--creme);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .oferta-box {
+      max-width: 520px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 8px 40px rgba(92,61,46,0.12);
+      border: 1px solid var(--bege);
+    }
+
+    .oferta-tag {
+      display: inline-block;
+      background: var(--terracota);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .oferta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 4vw, 30px);
+      color: var(--marrom);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .oferta-preco-antes {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .oferta-preco {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 8vw, 64px);
+      font-weight: 700;
+      color: var(--terracota);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .oferta-preco span {
+      font-size: 24px;
+      vertical-align: super;
+    }
+
+    .oferta-preco-desc {
+      font-size: 13px;
+      color: var(--texto-suave);
+      margin-bottom: 32px;
+    }
+
+    /* BOTÕES CAKTO */
+    .botoes-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    cakto-upsell-accept::part(button),
+    cakto-upsell-accept {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    cakto-upsell-reject::part(button),
+    cakto-upsell-reject {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    /* Override visual dos botões via style tag inline */
+    .btn-aceitar-custom {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #5CB85C 0%, #3d9140 100%);
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 18px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 20px rgba(92,184,92,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+      text-align: center;
+    }
+
+    .btn-aceitar-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(92,184,92,0.45);
+    }
+
+    .btn-rejeitar-custom {
+      font-size: 13px;
+      color: #999;
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Lato', sans-serif;
+      padding: 8px;
+      transition: color 0.2s;
+    }
+
+    .btn-rejeitar-custom:hover {
+      color: #666;
+    }
+
+    .oferta-garantia {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--texto-suave);
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: var(--marrom);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero > * { animation: fadeUp 0.7s ease both; }
+    .hero > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero > *:nth-child(2) { animation-delay: 0.25s; }
+    .hero > *:nth-child(3) { animation-delay: 0.35s; }
+    .hero > *:nth-child(4) { animation-delay: 0.45s; }
+    .hero > *:nth-child(5) { animation-delay: 0.55s; }
+
+    /* RESPONSIVO */
+    @media (max-width: 480px) {
+      .oferta-box { padding: 28px 20px; }
+      .dia-item { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPO -->
+  <div class="topo">
+    <p>⚠️ Oferta única — disponível apenas agora</p>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">Espere! Sua compra foi confirmada ✓</div>
+    <h1>Transforme cada momento<br>na cozinha em um <em>encontro com Deus</em></h1>
+    <div class="hero-divisor"></div>
+    <p class="hero-sub">Seus devocionais estão prontos para você</p>
+    <p>Você acabou de garantir suas Receitas Bíblicas Pro. Agora, por apenas mais R$14,90, leve também 10 dias de devocionais especialmente criados para acompanhar cada receita — e transformar sua cozinha em um altar de fé.</p>
+  </section>
+
+  <!-- EBOOK MOCKUP -->
+  <section class="ebook-section">
+    <div class="ebook-mockup">
+      <div class="ebook-mockup-inner">
+        <div class="ebook-icon">🕊️</div>
+        <div class="ebook-titulo">Cozinhando com Fé</div>
+        <div class="ebook-subtitulo">10 Dias de Devocionais para<br>Transformar sua Cozinha em Altar</div>
+      </div>
+      <div class="ebook-badge">Novo!</div>
+    </div>
+
+    <h2>Um devocional criado para<br><em>quem serve com amor</em></h2>
+    <p>Cada dia traz um versículo, uma reflexão e uma oração para você meditar enquanto cozinha — tornando cada refeição um ato de adoração.</p>
+  </section>
+
+  <!-- O QUE VOCÊ RECEBE -->
+  <section class="conteudo">
+    <div class="conteudo-inner">
+      <p class="section-label">O que está incluso</p>
+      <h2>10 Dias de Fé na Cozinha</h2>
+
+      <div class="dias-grid">
+        <div class="dia-item">
+          <div class="dia-numero">01</div>
+          <div class="dia-info">
+            <strong>O Pão da Vida</strong>
+            <span>João 6:35 — Sobre a fome que só o Senhor preenche</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">02</div>
+          <div class="dia-info">
+            <strong>As Mãos que Servem</strong>
+            <span>1 Pedro 4:10 — Servir é um dom, não uma obrigação</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">03</div>
+          <div class="dia-info">
+            <strong>A Mesa da Gratidão</strong>
+            <span>1 Tessalonicenses 5:18 — Transformando o simples em celebração</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">04</div>
+          <div class="dia-info">
+            <strong>O Mel da Palavra</strong>
+            <span>Salmos 119:103 — A doçura de Deus no cotidiano</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">05</div>
+          <div class="dia-info">
+            <strong>Alimentando com Amor</strong>
+            <span>Colossenses 3:14 — O ingrediente que não aparece na receita</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">06</div>
+          <div class="dia-info">
+            <strong>O Descanso do Sábado</strong>
+            <span>Isaías 40:29 — Cuidar de você também é fé</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">07</div>
+          <div class="dia-info">
+            <strong>A Multiplicação</strong>
+            <span>João 6:9 — Deus honra a entrega, não a abundância</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">08</div>
+          <div class="dia-info">
+            <strong>Hospitalidade Sagrada</strong>
+            <span>1 Pedro 4:9 — Abrir sua mesa é abrir seu coração</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">09</div>
+          <div class="dia-info">
+            <strong>O Fruto que Permanece</strong>
+            <span>João 15:16 — Sua rotina tem impacto eterno</span>
+          </div>
+        </div>
+        <div class="dia-item">
+          <div class="dia-numero">10</div>
+          <div class="dia-info">
+            <strong>A Mesa do Senhor</strong>
+            <span>1 Coríntios 11:26 — Você está sentado à mesa de um Rei</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERSÍCULO DESTAQUE -->
+  <section class="versiculo-destaque">
+    <blockquote>
+      <p>"Quão doces são as tuas palavras ao meu paladar! São mais doces que o mel à minha boca."</p>
+      <cite>— Salmos 119:103</cite>
+    </blockquote>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="oferta">
+    <div class="oferta-box">
+      <div class="oferta-tag">✦ Oferta exclusiva pós-compra</div>
+      <h2>Cozinhando com Fé<br>— 10 Dias de Devocionais</h2>
+
+      <p class="oferta-preco-antes">De R$29,90</p>
+      <div class="oferta-preco"><span>R$</span>14<span style="font-size:32px">,90</span></div>
+      <p class="oferta-preco-desc">Acesso imediato • PDF para baixar • Disponível só agora</p>
+
+      <div class="botoes-wrapper">
+
+        <!-- BOTÕES CAKTO — substitua pelo código gerado pela Cakto -->
+        <cakto-upsell-buttons>
+          <cakto-upsell-accept
+            bg-color="#4CAF50"
+            text-color="#ffffff"
+            upsell-accept-url="members_area"
+            offer-id="3b4guy4"
+            app-base-url="https://app.cakto.com.br"
+            offer-type="upsell"
+            upsell-reject-url="members_area"
+          >
+            ✦ Sim! Quero meu devocional por R$14,90
+          </cakto-upsell-accept>
+          <cakto-upsell-reject
+            upsell-reject-url="members_area"
+          >
+            Não, obrigado — vou continuar sem o devocional
+          </cakto-upsell-reject>
+        </cakto-upsell-buttons>
+        <!-- FIM BOTÕES CAKTO -->
+
+      </div>
+
+      <div class="oferta-garantia">
+        🔒 Compra 100% segura • Entrega imediata
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>
+      Receitas Bíblicas Pro • Todos os direitos reservados<br>
+      Esta é uma oferta exclusiva apresentada uma única vez após sua compra.
+    </p>
+  </footer>
+
+  <script type="text/javascript" src="https://caktoscripts.nyc3.cdn.digitaloceanspaces.com/upsell.js"></script>
+
+</body>
+</html>
